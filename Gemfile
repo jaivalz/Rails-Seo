@@ -31,6 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'ckeditor'
 gem 'friendly_id'
+gem 'sitemap_generator'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
