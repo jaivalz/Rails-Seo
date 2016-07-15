@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @meta_title = meta_title "Para encontrar consejos sobre SEO"
+    @meta_description = "Frase de prueba, me gusta la pizza"
   end
 
   # GET /posts/1
