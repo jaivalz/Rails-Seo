@@ -14,7 +14,13 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @meta_title = meta_title @post.title
-   @canonical_url = canonical_url "/posts/#{@post.slug}"
+    @canonical_url = canonical_url "/posts/#{@post.slug}"
+    @og_properties = {
+      title: @meta_title,
+      type: 'website',
+      image: view_context.image_url('logo.png'),  # this file should exist in /app/assets/images/logo.png
+      url: @canonical_url
+      }
   end
 
   # GET /posts/new

@@ -9,6 +9,12 @@
   <% if @canonical_url.present? %>
   <link rel="canonical" href="<%= @canonical_url %>" />
   <% end %>
+  <% if @og_properties.present? %>
+    <%= meta_og_tags @og_properties %>
+  <% end %>
+  
+  <%= meta_og_tags title: 'Esto es el titulo',
+                   type: 'website'%>
   
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
