@@ -5,11 +5,13 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    @meta_title = meta_title "Para encontrar consejos sobre SEO"
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @meta_title = meta_title @post.title
   end
 
   # GET /posts/new
