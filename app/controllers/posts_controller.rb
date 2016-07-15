@@ -7,12 +7,14 @@ class PostsController < ApplicationController
     @posts = Post.all
     @meta_title = meta_title "Para encontrar consejos sobre SEO"
     @meta_description = "Frase de prueba, me gusta la pizza"
+    @canonical_url = canonical_url
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
     @meta_title = meta_title @post.title
+   @canonical_url = canonical_url "/posts/#{@post.slug}"
   end
 
   # GET /posts/new
